@@ -100,12 +100,13 @@ curl -X POST \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
   -d '{
-	"email": "demo@demo.com",
+	"email": "estrada9166@gmail.com",
 	"age": 26,
 	"visitedCities": ["MDE"],
 	"information": {
 		"github": "estrada9166"
-	}
+	},
+	"isAdmin": true
 }'
 ```
 Response
@@ -123,7 +124,8 @@ curl -X POST \
 	"visitedCities": ["MDE"],
 	"information": {
 		"github": "estrada9166"
-	}
+	},
+	"isAdmin": true
 }'
 ```
 Response
@@ -137,11 +139,11 @@ curl -X POST \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
   -d '{
-	"email": "demo@demo.com",
+	"email": "estrada9166@gmail.com",
 	"age": 26,
 	"visitedCities": ["MDE"],
-	"information": [{"github": "estrada9166"}],
-  "isAdmin": true
+	"information": [{ "github": "estrada9166" }],
+	"isAdmin": true
 }'
 ```
 Response
