@@ -1,3 +1,3 @@
-'use strict';
+'use strict'
 
-module.exports = require('./lib/shma-express');
+module.exports = require('./lib/shma-express')
