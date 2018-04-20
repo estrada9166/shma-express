@@ -1,6 +1,6 @@
 {
   "name": "shma-express",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Validate body, query and params schema before processing it.",
   "main": "index.js",
   "scripts": {},
