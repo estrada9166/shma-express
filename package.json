@@ -1,0 +1,27 @@
+{
+  "name": "shma-express",
+  "version": "0.0.1",
+  "description": "Validate body, query and params schema before processing it.",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "nodejs",
+    "expressjs",
+    "express",
+    "schema"
+  ],
+  "homepage": "https://github.com/estrada9166/shma-express",
+  "author": {
+    "name": "estrada9166",
+    "url": "https://github.com/estrada9166"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/estrada9166/shma-express"
+  },
+  "bugs": {
+    "url": "https://github.com/estrada9166/shma-express/issues"
+  },
+  "license": "MIT",
+  "dependencies": {}
+}
