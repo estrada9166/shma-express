@@ -24,24 +24,27 @@ The shma type can receive multiple types, those are:
 + `number`
 + `array`
 + `object`
++ `boolean`
 
 ```js
 const shmaExample = {
   email: shma.string,
   age: shma.number
   visitedCities: shma.array,
-  information: shma.object
+  information: shma.object,
+  isAdmin: shma.boolean
 }
 ```
 ### Set the shma as middleware
 Set the shma middleware on the route you want to validate before procesing the data.
 ```js
 app.post('/example', validator.schema(shmaExample), (req, res) => {
-  const { email, age, visitedCities, information } = req.body
+  const { email, age, visitedCities, information, isAdmin } = req.body
   console.log(email)
   console.log(age)
   console.log(visitedCities)
   console.log(information)
+  console.log(isAdmin)
   res.status(200).send('success')
 })
 ```
@@ -72,7 +75,8 @@ const shmaExample = {
   email: shma.string,
   age: shma.number,
   visitedCities: shma.array,
-  information: shma.object
+  information: shma.object,
+  isAdmin: shma.boolean
 }
 
 app.post('/example', shma.schema(shmaExample), (req, res) => {
@@ -136,7 +140,8 @@ curl -X POST \
 	"email": "demo@demo.com",
 	"age": 26,
 	"visitedCities": ["MDE"],
-	"information": [{"github": "estrada9166"}]
+	"information": [{"github": "estrada9166"}],
+  "isAdmin": true
 }'
 ```
 Response
