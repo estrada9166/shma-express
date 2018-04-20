@@ -27,10 +27,10 @@ The shma type can receive multiple types, those are:
 
 ```js
 const shmaExample = {
-  email: validator.string,
-  age: validator.number
-  visitedCities: validator.array,
-  information: validator.object
+  email: shma.string,
+  age: shma.number
+  visitedCities: shma.array,
+  information: shma.object
 }
 ```
 ### Set the shma as middleware
@@ -61,21 +61,21 @@ res.status(400).send('<WRONG_ARG> must by type of <TYPE_OF>')
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
-const Schma = require('shma-express')
+const Shma = require('shma-express')
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json({limit: '2mb', type: 'application/json'}))
 
-const schma = new Schma()
+const shma = new Shma()
 
 const shmaExample = {
-  email: schma.string,
-  age: schma.number,
-  visitedCities: schma.array,
-  information: schma.object
+  email: shma.string,
+  age: shma.number,
+  visitedCities: shma.array,
+  information: shma.object
 }
 
-app.post('/example', schma.schema(shmaExample), (req, res) => {
+app.post('/example', shma.schema(shmaExample), (req, res) => {
   const { email, age, visitedCities, information } = req.body
   console.log(email)
   console.log(age)
@@ -87,7 +87,6 @@ app.post('/example', schma.schema(shmaExample), (req, res) => {
 app.listen(3000, () => {
   console.log(`running on port ${3000}`)
 })
-
 ```
 ### Request
 #### Success
