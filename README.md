@@ -35,6 +35,9 @@ const shmaExample = {
   isAdmin: shma.boolean
 }
 ```
+### Optional schma
+If the schma includes `?` it will be optional
+
 ### Set the shma as middleware
 Set the shma middleware on the route you want to validate before procesing the data.
 ```js
